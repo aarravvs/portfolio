@@ -1,0 +1,136 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAF3E0;
+    color: #333333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333333;
+}
+
+a {
+    color: #4A90E2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FF6B6B;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333333;
+    color: #FAF3E0;
+    text-align: center;
+    padding: 1rem 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#navbar a {
+    color: #FAF3E0;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+#navbar #toggleTheme {
+    background: transparent;
+    border: 1px solid #FAF3E0;
+    color: #FAF3E0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#navbar #toggleTheme:hover {
+    background: #4A90E2;
+    color: #FAF3E0;
+}
+
+#hero {
+    background: linear-gradient(rgba(30, 30, 44, 0.8), rgba(30, 30, 44, 0.8)), url('your-image.jpg') no-repeat center center/cover;
+    color: #FAF3E0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Cards for Projects, Certifications, and Experience */
+.project-card, .certification-card, .experience-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .certification-card:hover, .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.certification-card h3, .experience-card h3 {
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+.certification-card p, .experience-card p {
+    font-size: 1rem;
+    color: #555555;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1E1E2C;
+    color: #E8E8E8;
+}
+
+body.dark-mode #navbar {
+    background-color: #2D2D3C;
+}
+
+body.dark-mode a {
+    color: #4A90E2;
+}
+
+body.dark-mode #navbar #toggleTheme {
+    color: #4A90E2;
+    border-color: #4A90E2;
+}
+
+body.dark-mode #hero {
+    color: #E8E8E8;
+}
+
+body.dark-mode .project-card, 
+body.dark-mode .certification-card, 
+body.dark-mode .experience-card {
+    background: #2D2D3C;
+    color: #E8E8E8;
+}
